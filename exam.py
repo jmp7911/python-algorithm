@@ -11,6 +11,7 @@ def solution(data):
             elif chr == '-':
                 binaryCode += '0'
         Ascii = int(binaryCode, 2)
+        print(Ascii.bit_length())
         answer += Ascii.to_bytes((Ascii.bit_length() + 7) // 8, 'big').decode()
     return answer
 
