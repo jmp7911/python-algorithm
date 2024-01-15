@@ -6,6 +6,6 @@ def solution(A,B):
     B_ = sorted(B)
     
     
-    answer = sum([x[0]*x[1] for x in zip(A_, B_)])
+    answer = sum([a * b for a, b in zip(A_, B_)])
 
     return answer
