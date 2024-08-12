@@ -14,7 +14,7 @@ class Solution:
         while num > 0:
             remainer = num % 10
             num //=  10
-            # print(remainer, times)
+            
             if remainer == 4:
                 answer = symbols[times] + symbols[times * 5] + answer
             elif remainer == 9:
