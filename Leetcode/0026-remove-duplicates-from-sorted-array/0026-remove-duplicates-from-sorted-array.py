@@ -7,6 +7,6 @@ class Solution:
                count += 1
                nums[count] = x
                be = x
-        count += 1
+        
 
-        return count
+        return count + 1
