@@ -4,7 +4,7 @@ class Solution:
         answer = []
         def back(i, res):
             if sum(res) == target:
-                answer.append(tuple(sorted(res)))
+                answer.append(tuple(res))
                 return
             elif sum(res) > target:
                 return
@@ -16,6 +16,6 @@ class Solution:
         
         back(0, [])
         
-        return set(answer)
+        return answer
         
             
