@@ -2,8 +2,7 @@ import itertools
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         answer = []
-        res = []
-        def back():
+        def back(res):
             if sum(res) == target:
                 answer.append(tuple(sorted(res)))
                 return
@@ -12,10 +11,10 @@ class Solution:
             else:
                 for x in candidates:
                     res.append(x)
-                    back()
+                    back(res)
                     res.pop()
         
-        back()
+        back([])
         
         return set(answer)
         
