@@ -10,11 +10,10 @@ class Solution:
                 if tuple(sorted(res)) not in ans:
                     ans.append(tuple(sorted(res)))
                 return
-            
             for j in range(i, len(candidates)):
                 if j > i and candidates[j] == candidates[j-1]:
                     continue
-                if candidates[j] + sum(res) <= target:
+                if sum(res) + candidates[j] <= target:
                     res.append(candidates[j])
                     back(j + 1, res)
                     res.pop()
